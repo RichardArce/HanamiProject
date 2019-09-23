@@ -1,0 +1,18 @@
+<h2>All books</h2>
+<% if books.any? %>
+  <div class="div-table">
+    <div class="div-table-row">
+      <div class="div-table-col">Book title</div>
+      <div class="div-table-col">Book Author</div>
+    </div>
+    <% books.each do |book| %>
+      <div class="div-table-row">
+        <div class="div-table-col"><%= book.title %></div>
+        <div class="div-table-col"><%= book.author %></div>
+      </div>
+    <% end %>
+  </div>
+<% else %>
+  <p class="placeholder">There are no books yet.</p>
+<% end %>
+<a href="/books/new">New book</a>
